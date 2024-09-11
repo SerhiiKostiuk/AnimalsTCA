@@ -18,6 +18,8 @@
 		03182B8F2C9172780043996E /* FactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B8E2C9172780043996E /* FactEntity.swift */; };
 		03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B932C9173060043996E /* AnimalAPIModel.swift */; };
 		03182B962C9173100043996E /* FactAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B952C9173100043996E /* FactAPIModel.swift */; };
+		03182B992C91753E0043996E /* EntitySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B982C91753E0043996E /* EntitySerialization.swift */; };
+		03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B9A2C9175610043996E /* Collection+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		03182B8E2C9172780043996E /* FactEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactEntity.swift; sourceTree = "<group>"; };
 		03182B932C9173060043996E /* AnimalAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAPIModel.swift; sourceTree = "<group>"; };
 		03182B952C9173100043996E /* FactAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactAPIModel.swift; sourceTree = "<group>"; };
+		03182B982C91753E0043996E /* EntitySerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitySerialization.swift; sourceTree = "<group>"; };
+		03182B9A2C9175610043996E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			children = (
 				03182B8C2C9172680043996E /* AnimalEntity.swift */,
 				03182B8E2C9172780043996E /* FactEntity.swift */,
+				03182B982C91753E0043996E /* EntitySerialization.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		03182B972C9173150043996E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				03182B9A2C9175610043996E /* Collection+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,10 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03182B992C91753E0043996E /* EntitySerialization.swift in Sources */,
 				03182B962C9173100043996E /* FactAPIModel.swift in Sources */,
 				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
 				03182B762C91708C0043996E /* ContentView.swift in Sources */,
 				03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */,
+				03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */,
 				03182B8F2C9172780043996E /* FactEntity.swift in Sources */,
 				03182B742C91708C0043996E /* AnimalsTCAApp.swift in Sources */,
 			);
