@@ -20,6 +20,10 @@
 		03182B962C9173100043996E /* FactAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B952C9173100043996E /* FactAPIModel.swift */; };
 		03182B992C91753E0043996E /* EntitySerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B982C91753E0043996E /* EntitySerialization.swift */; };
 		03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B9A2C9175610043996E /* Collection+Extensions.swift */; };
+		03182BA02C91765B0043996E /* AnimalCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B9F2C91765B0043996E /* AnimalCategoriesView.swift */; };
+		03182BA22C9176660043996E /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA12C9176660043996E /* FactsView.swift */; };
+		03182BA42C9176B30043996E /* FactsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA32C9176B30043996E /* FactsStore.swift */; };
+		03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		03182B952C9173100043996E /* FactAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactAPIModel.swift; sourceTree = "<group>"; };
 		03182B982C91753E0043996E /* EntitySerialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitySerialization.swift; sourceTree = "<group>"; };
 		03182B9A2C9175610043996E /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		03182B9F2C91765B0043996E /* AnimalCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesView.swift; sourceTree = "<group>"; };
+		03182BA12C9176660043996E /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
+		03182BA32C9176B30043996E /* FactsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsStore.swift; sourceTree = "<group>"; };
+		03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		03182B722C91708C0043996E /* AnimalsTCA */ = {
 			isa = PBXGroup;
 			children = (
+				03182B9C2C9176180043996E /* Modules */,
 				03182B902C9172D90043996E /* Library */,
 				03182B8B2C9172100043996E /* Entities */,
 				03182B732C91708C0043996E /* AnimalsTCAApp.swift */,
@@ -131,6 +140,33 @@
 				03182B9A2C9175610043996E /* Collection+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03182B9C2C9176180043996E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				03182B9E2C9176350043996E /* AnimalCategories */,
+				03182B9D2C9176280043996E /* Facts */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		03182B9D2C9176280043996E /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				03182BA12C9176660043996E /* FactsView.swift */,
+				03182BA32C9176B30043996E /* FactsStore.swift */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		03182B9E2C9176350043996E /* AnimalCategories */ = {
+			isa = PBXGroup;
+			children = (
+				03182B9F2C91765B0043996E /* AnimalCategoriesView.swift */,
+				03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */,
+			);
+			path = AnimalCategories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03182BA22C9176660043996E /* FactsView.swift in Sources */,
 				03182B992C91753E0043996E /* EntitySerialization.swift in Sources */,
 				03182B962C9173100043996E /* FactAPIModel.swift in Sources */,
+				03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */,
 				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
+				03182BA42C9176B30043996E /* FactsStore.swift in Sources */,
+				03182BA02C91765B0043996E /* AnimalCategoriesView.swift in Sources */,
 				03182B762C91708C0043996E /* ContentView.swift in Sources */,
 				03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */,
 				03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */,

@@ -29,3 +29,28 @@ enum AnimalAPIStatus: String, Codable, PersistableEnum {
     case free
     case paid
 }
+
+extension AnimalAPIModel: EntitySerialization {
+    typealias Entity = AnimalEntity
+    
+    func entity() throws -> AnimalEntity {
+        var contentStatus: AnimalEntity.ContentStatus
+        
+        if facts == nil || facts?.count == 0 {
+            contentStatus = .comingSoon
+        } else {
+            switch status {
+            case .free: contentStatus = .free
+            case .paid: contentStatus = .paid
+            }
+        }
+        
+        let facts = try? facts?.mapEntities()
+        return .init(title: title,
+                     description: description,
+                     imageUrl: imageUrl,
+                     status: contentStatus,
+                     order: order,
+                     facts: facts)
+    }
+}

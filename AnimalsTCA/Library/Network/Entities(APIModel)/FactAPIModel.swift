@@ -17,3 +17,11 @@ struct FactAPIModel: Codable {
         case imageUrl = "image"
     }
 }
+
+extension FactAPIModel: EntitySerialization {
+    typealias Entity = FactEntity
+    
+    func entity() throws -> FactEntity {
+        .init(fact: fact, imageUrl: imageUrl, id: id)
+    }
+}
