@@ -9,7 +9,7 @@ import Foundation
 
 struct FactAPIModel: Codable {
     let fact: String
-    let imageUrl: String
+    let imageUrl: String?
     let id = UUID()
     
     enum CodingKeys: String, CodingKey {

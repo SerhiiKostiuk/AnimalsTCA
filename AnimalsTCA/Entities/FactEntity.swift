@@ -9,6 +9,12 @@ import Foundation
 
 struct FactEntity {
     let fact: String
-    let imageUrl: String
+    let imageUrl: String?
     let id: UUID
+}
+
+extension FactEntity: Equatable {
+    static func == (lhs: FactEntity, rhs: FactEntity) -> Bool {
+        lhs.id == rhs.id
+    }
 }
