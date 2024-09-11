@@ -24,12 +24,12 @@
 		03182BA22C9176660043996E /* FactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA12C9176660043996E /* FactsView.swift */; };
 		03182BA42C9176B30043996E /* FactsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA32C9176B30043996E /* FactsStore.swift */; };
 		03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */; };
-		03182BA92C917D100043996E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 03182BA82C917D100043996E /* Alamofire */; };
-		03182BAB2C917D100043996E /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 03182BAA2C917D100043996E /* AlamofireDynamic */; };
 		03182BAD2C917E5B0043996E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BAC2C917E5B0043996E /* NetworkService.swift */; };
 		03182BAF2C917EEE0043996E /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BAE2C917EEE0043996E /* ServerConstants.swift */; };
 		03182BB22C917FE10043996E /* BaseRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB12C917FE10043996E /* BaseRequestProtocol.swift */; };
 		03182BB42C9180CF0043996E /* AnimalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB32C9180CF0043996E /* AnimalsRequest.swift */; };
+		03182BB72C9185140043996E /* AnimalCategoriesEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB62C9185140043996E /* AnimalCategoriesEnviroment.swift */; };
+		03182BBC2C918B9D0043996E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 03182BBB2C918B9D0043996E /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +53,7 @@
 		03182BAE2C917EEE0043996E /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
 		03182BB12C917FE10043996E /* BaseRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestProtocol.swift; sourceTree = "<group>"; };
 		03182BB32C9180CF0043996E /* AnimalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequest.swift; sourceTree = "<group>"; };
+		03182BB62C9185140043996E /* AnimalCategoriesEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesEnviroment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03182B8A2C9171D60043996E /* Kingfisher in Frameworks */,
-				03182BA92C917D100043996E /* Alamofire in Frameworks */,
-				03182BAB2C917D100043996E /* AlamofireDynamic in Frameworks */,
+				03182BBC2C918B9D0043996E /* Alamofire in Frameworks */,
 				03182B872C9171C40043996E /* RealmSwift in Frameworks */,
 				03182B842C9171A40043996E /* ComposableArchitecture in Frameworks */,
 			);
@@ -178,8 +178,8 @@
 		03182B9E2C9176350043996E /* AnimalCategories */ = {
 			isa = PBXGroup;
 			children = (
+				03182BB52C9184FB0043996E /* Store */,
 				03182B9F2C91765B0043996E /* AnimalCategoriesView.swift */,
-				03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */,
 			);
 			path = AnimalCategories;
 			sourceTree = "<group>";
@@ -191,6 +191,15 @@
 				03182BB32C9180CF0043996E /* AnimalsRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		03182BB52C9184FB0043996E /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */,
+				03182BB62C9185140043996E /* AnimalCategoriesEnviroment.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,8 +222,7 @@
 				03182B832C9171A40043996E /* ComposableArchitecture */,
 				03182B862C9171C40043996E /* RealmSwift */,
 				03182B892C9171D60043996E /* Kingfisher */,
-				03182BA82C917D100043996E /* Alamofire */,
-				03182BAA2C917D100043996E /* AlamofireDynamic */,
+				03182BBB2C918B9D0043996E /* Alamofire */,
 			);
 			productName = AnimalsTCA;
 			productReference = 03182B702C91708C0043996E /* AnimalsTCA.app */;
@@ -248,7 +256,7 @@
 				03182B822C9171A40043996E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 				03182B852C9171C40043996E /* XCRemoteSwiftPackageReference "realm-swift" */,
 				03182B882C9171D60043996E /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				03182BA72C917D100043996E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				03182BBA2C918B9D0043996E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 03182B712C91708C0043996E /* Products */;
 			projectDirPath = "";
@@ -282,6 +290,7 @@
 				03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */,
 				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
 				03182BB22C917FE10043996E /* BaseRequestProtocol.swift in Sources */,
+				03182BB72C9185140043996E /* AnimalCategoriesEnviroment.swift in Sources */,
 				03182BA42C9176B30043996E /* FactsStore.swift in Sources */,
 				03182BA02C91765B0043996E /* AnimalCategoriesView.swift in Sources */,
 				03182B762C91708C0043996E /* ContentView.swift in Sources */,
@@ -534,7 +543,7 @@
 				minimumVersion = 7.12.0;
 			};
 		};
-		03182BA72C917D100043996E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		03182BBA2C918B9D0043996E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -560,15 +569,10 @@
 			package = 03182B882C9171D60043996E /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		03182BA82C917D100043996E /* Alamofire */ = {
+		03182BBB2C918B9D0043996E /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 03182BA72C917D100043996E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 03182BBA2C918B9D0043996E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		03182BAA2C917D100043996E /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 03182BA72C917D100043996E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -12,6 +12,11 @@ protocol NetworkProtocol {
     func request<T: Decodable>(_ urlRequest: URLRequestConvertible, _ type: T.Type) async throws -> T
 }
 
-final class NetworkService {
+final class NetworkService: NetworkProtocol {
     
+    func request<T: Decodable>(_ urlRequest: URLRequestConvertible, _ type: T.Type) async throws -> T {
+        try await AF.request(urlRequest)
+            .serializingDecodable(type)
+            .value
+    }
 }
