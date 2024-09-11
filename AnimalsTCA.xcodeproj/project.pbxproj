@@ -11,6 +11,9 @@
 		03182B762C91708C0043996E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B752C91708C0043996E /* ContentView.swift */; };
 		03182B782C91708E0043996E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03182B772C91708E0043996E /* Assets.xcassets */; };
 		03182B7C2C91708E0043996E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03182B7B2C91708E0043996E /* Preview Assets.xcassets */; };
+		03182B842C9171A40043996E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B832C9171A40043996E /* ComposableArchitecture */; };
+		03182B872C9171C40043996E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B862C9171C40043996E /* RealmSwift */; };
+		03182B8A2C9171D60043996E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B892C9171D60043996E /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03182B8A2C9171D60043996E /* Kingfisher in Frameworks */,
+				03182B872C9171C40043996E /* RealmSwift in Frameworks */,
+				03182B842C9171A40043996E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,11 @@
 			dependencies = (
 			);
 			name = AnimalsTCA;
+			packageProductDependencies = (
+				03182B832C9171A40043996E /* ComposableArchitecture */,
+				03182B862C9171C40043996E /* RealmSwift */,
+				03182B892C9171D60043996E /* Kingfisher */,
+			);
 			productName = AnimalsTCA;
 			productReference = 03182B702C91708C0043996E /* AnimalsTCA.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +124,11 @@
 				Base,
 			);
 			mainGroup = 03182B672C91708C0043996E;
+			packageReferences = (
+				03182B822C9171A40043996E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				03182B852C9171C40043996E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				03182B882C9171D60043996E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 03182B712C91708C0043996E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -355,6 +371,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03182B822C9171A40043996E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.14.0;
+			};
+		};
+		03182B852C9171C40043996E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		03182B882C9171D60043996E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03182B832C9171A40043996E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03182B822C9171A40043996E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		03182B862C9171C40043996E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03182B852C9171C40043996E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		03182B892C9171D60043996E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03182B882C9171D60043996E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 03182B682C91708C0043996E /* Project object */;
 }
