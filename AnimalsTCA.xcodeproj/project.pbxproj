@@ -26,6 +26,10 @@
 		03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */; };
 		03182BA92C917D100043996E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 03182BA82C917D100043996E /* Alamofire */; };
 		03182BAB2C917D100043996E /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 03182BAA2C917D100043996E /* AlamofireDynamic */; };
+		03182BAD2C917E5B0043996E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BAC2C917E5B0043996E /* NetworkService.swift */; };
+		03182BAF2C917EEE0043996E /* ServerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BAE2C917EEE0043996E /* ServerConstants.swift */; };
+		03182BB22C917FE10043996E /* BaseRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB12C917FE10043996E /* BaseRequestProtocol.swift */; };
+		03182BB42C9180CF0043996E /* AnimalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB32C9180CF0043996E /* AnimalsRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		03182BA12C9176660043996E /* FactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsView.swift; sourceTree = "<group>"; };
 		03182BA32C9176B30043996E /* FactsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsStore.swift; sourceTree = "<group>"; };
 		03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesStore.swift; sourceTree = "<group>"; };
+		03182BAC2C917E5B0043996E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		03182BAE2C917EEE0043996E /* ServerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConstants.swift; sourceTree = "<group>"; };
+		03182BB12C917FE10043996E /* BaseRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestProtocol.swift; sourceTree = "<group>"; };
+		03182BB32C9180CF0043996E /* AnimalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +132,10 @@
 		03182B912C9172E00043996E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				03182BB02C917FD70043996E /* Requests */,
 				03182B922C9172EC0043996E /* Entities(APIModel) */,
+				03182BAC2C917E5B0043996E /* NetworkService.swift */,
+				03182BAE2C917EEE0043996E /* ServerConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -171,6 +182,15 @@
 				03182BA52C9176F60043996E /* AnimalCategoriesStore.swift */,
 			);
 			path = AnimalCategories;
+			sourceTree = "<group>";
+		};
+		03182BB02C917FD70043996E /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				03182BB12C917FE10043996E /* BaseRequestProtocol.swift */,
+				03182BB32C9180CF0043996E /* AnimalsRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,12 +281,16 @@
 				03182B962C9173100043996E /* FactAPIModel.swift in Sources */,
 				03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */,
 				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
+				03182BB22C917FE10043996E /* BaseRequestProtocol.swift in Sources */,
 				03182BA42C9176B30043996E /* FactsStore.swift in Sources */,
 				03182BA02C91765B0043996E /* AnimalCategoriesView.swift in Sources */,
 				03182B762C91708C0043996E /* ContentView.swift in Sources */,
 				03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */,
 				03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */,
 				03182B8F2C9172780043996E /* FactEntity.swift in Sources */,
+				03182BAD2C917E5B0043996E /* NetworkService.swift in Sources */,
+				03182BB42C9180CF0043996E /* AnimalsRequest.swift in Sources */,
+				03182BAF2C917EEE0043996E /* ServerConstants.swift in Sources */,
 				03182B742C91708C0043996E /* AnimalsTCAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
