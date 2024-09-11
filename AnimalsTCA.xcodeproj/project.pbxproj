@@ -14,6 +14,10 @@
 		03182B842C9171A40043996E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B832C9171A40043996E /* ComposableArchitecture */; };
 		03182B872C9171C40043996E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B862C9171C40043996E /* RealmSwift */; };
 		03182B8A2C9171D60043996E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B892C9171D60043996E /* Kingfisher */; };
+		03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B8C2C9172680043996E /* AnimalEntity.swift */; };
+		03182B8F2C9172780043996E /* FactEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B8E2C9172780043996E /* FactEntity.swift */; };
+		03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B932C9173060043996E /* AnimalAPIModel.swift */; };
+		03182B962C9173100043996E /* FactAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B952C9173100043996E /* FactAPIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		03182B772C91708E0043996E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03182B792C91708E0043996E /* AnimalsTCA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimalsTCA.entitlements; sourceTree = "<group>"; };
 		03182B7B2C91708E0043996E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03182B8C2C9172680043996E /* AnimalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntity.swift; sourceTree = "<group>"; };
+		03182B8E2C9172780043996E /* FactEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactEntity.swift; sourceTree = "<group>"; };
+		03182B932C9173060043996E /* AnimalAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAPIModel.swift; sourceTree = "<group>"; };
+		03182B952C9173100043996E /* FactAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactAPIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 		03182B722C91708C0043996E /* AnimalsTCA */ = {
 			isa = PBXGroup;
 			children = (
+				03182B902C9172D90043996E /* Library */,
+				03182B8B2C9172100043996E /* Entities */,
 				03182B732C91708C0043996E /* AnimalsTCAApp.swift */,
 				03182B752C91708C0043996E /* ContentView.swift */,
 				03182B772C91708E0043996E /* Assets.xcassets */,
@@ -73,6 +83,48 @@
 				03182B7B2C91708E0043996E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03182B8B2C9172100043996E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				03182B8C2C9172680043996E /* AnimalEntity.swift */,
+				03182B8E2C9172780043996E /* FactEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		03182B902C9172D90043996E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				03182B972C9173150043996E /* Extensions */,
+				03182B912C9172E00043996E /* Network */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		03182B912C9172E00043996E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				03182B922C9172EC0043996E /* Entities(APIModel) */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		03182B922C9172EC0043996E /* Entities(APIModel) */ = {
+			isa = PBXGroup;
+			children = (
+				03182B932C9173060043996E /* AnimalAPIModel.swift */,
+				03182B952C9173100043996E /* FactAPIModel.swift */,
+			);
+			path = "Entities(APIModel)";
+			sourceTree = "<group>";
+		};
+		03182B972C9173150043996E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03182B962C9173100043996E /* FactAPIModel.swift in Sources */,
+				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
 				03182B762C91708C0043996E /* ContentView.swift in Sources */,
+				03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */,
+				03182B8F2C9172780043996E /* FactEntity.swift in Sources */,
 				03182B742C91708C0043996E /* AnimalsTCAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
