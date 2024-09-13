@@ -9,4 +9,6 @@ import Foundation
 
 struct AnimalCategoriesEnviroment {
     let networkService: NetworkProtocol
+    let reachabilityService: ReachabilityService
+    let realmService: RealmService
 }

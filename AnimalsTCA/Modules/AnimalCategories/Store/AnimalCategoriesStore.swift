@@ -11,8 +11,10 @@ import ComposableArchitecture
 @Reducer
 struct AnimalCategoriesStore {
     
-    private let enviroment: AnimalCategoriesEnviroment = .init(networkService: NetworkService())
-    
+    private let enviroment: AnimalCategoriesEnviroment = .init(networkService: NetworkService(),
+                                                               reachabilityService: .init(),
+                                                               realmService: .init())
+    //MARK: - State
     @ObservableState
     struct State: Equatable {
         @Presents var addsAlert: AlertState<Action.AddsAlert>?
@@ -26,6 +28,7 @@ struct AnimalCategoriesStore {
         var paidCategory: AnimalEntity?
     }
     
+    //MARK: - Action
     enum Action: Equatable {
         case start
         case categoryDetails(StackAction<FactsStore.State, FactsStore.Action>)
@@ -45,18 +48,35 @@ struct AnimalCategoriesStore {
         enum CommingSoonAlert {
             case ok
         }
+        
+        static func == (lhs: AnimalCategoriesStore.Action, rhs: AnimalCategoriesStore.Action) -> Bool {
+            return lhs.is(\.start) == rhs.is(\.start)
+        }
     }
     
-    // MARK: - Body
+    // MARK: - Reducer
     var body: some Reducer<State, Action> {
         Reduce { state, action in
             switch action {
             case .start:
                 state.isLoading = true
                 return .run { send in
+                    guard enviroment.reachabilityService.connectionAvailable() else {
+                        let entities = enviroment.realmService.getObjects(ofType: AnimalRealmEntity.self)?.toArray().compactMap({ $0.asAnimalEntity })
+                                                                        
+                        await send(.animalsResponse(entities))
+                        return
+                    }
+                    
                     let result = try? await enviroment.networkService.request(AnimalsRequest.animalsCategories,
                                                                               [AnimalAPIModel].self)
                     let animalCategories = try result?.entities().sorted(by: { $0.order < $1.order })
+                    
+                    guard let realmEntities = animalCategories?.compactMap({ $0.asAnimalRealmEntity }) else {
+                        return
+                    }
+                    
+                    try await enviroment.realmService.save(realmEntities)
                     await send(.animalsResponse(animalCategories))
                 }
                 

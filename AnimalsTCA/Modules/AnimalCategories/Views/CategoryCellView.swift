@@ -59,10 +59,7 @@ struct CategoryCellView: View {
         .background(Color.white)
         .overlay {
             if category.status == .comingSoon {
-                ZStack(alignment: .trailing) {
-                    Color.black.opacity(Constants.opacity)
-                    Image("coming_soon")
-                }
+                comingSoonView
             }
         }
         .clipShape(
@@ -70,6 +67,8 @@ struct CategoryCellView: View {
         )
     }
     
+    //MARK: - Private Views
+
     private var lockIcon: some View {
         HStack(spacing: Constants.spacingXS) {
             Image(Constants.lockIconName)
@@ -79,13 +78,22 @@ struct CategoryCellView: View {
         }
         .foregroundStyle(Constants.paidTitleColor)
     }
+    
+    private var comingSoonView: some View {
+        ZStack(alignment: .trailing) {
+            Color.black.opacity(Constants.opacity)
+            Image(Constants.comingSoonIconName)
+        }
+    }
 }
     
+// MARK: - Constants
 private extension CategoryCellView {
     enum Constants {
         static let imageAspectRatio: CGFloat = 4/3
         static let paidTitleColor = Color(red: 0.031, green: 0.227, blue: 0.921, opacity: 1)
         static let lockIconName = "lock"
+        static let comingSoonIconName = "coming_soon"
         static let cornerRadius = 6.0
         static let spacingXS = 4.0
         static let spacingS = 6.0
@@ -96,7 +104,6 @@ private extension CategoryCellView {
         static let maxHeight = 150.0
     }
 }
-
 
 #Preview {
     CategoryCellView(category: .init(title: "Cats", description: "some descrip text", imageUrl: "https://images6.alphacoders.com/337/337780.jpg", status: .paid, order: 2, facts: nil))

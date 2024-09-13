@@ -58,9 +58,9 @@ struct AnimalCategoriesView: View {
                             } else {
                                 ForEach(0...2, id: \.self) { _ in
                                     CategoryCellView(category: AnimalEntity.empty)
+                                        .frame(height: geometry.size.width / Constants.divider)
                                         .redacted(reason: .placeholder)
                                 }
-                                .frame(height: geometry.size.width / Constants.divider)
                             }
                         })
                     }
@@ -98,7 +98,6 @@ struct AnimalCategoriesView: View {
 }
 
 // MARK: - Constants
-
 private extension AnimalCategoriesView {
     
     enum Constants {
