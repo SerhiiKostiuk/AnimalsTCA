@@ -34,9 +34,9 @@ extension AnimalAPIModel: EntitySerialization {
     typealias Entity = AnimalEntity
     
     func entity() throws -> AnimalEntity {
-        var contentStatus: AnimalEntity.ContentStatus
+        var contentStatus: ContentStatus
         
-        if facts == nil || facts?.count == 0 {
+        if facts == nil || facts?.count == .zero {
             contentStatus = .comingSoon
         } else {
             switch status {

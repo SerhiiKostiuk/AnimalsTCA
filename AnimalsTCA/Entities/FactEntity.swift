@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct FactEntity {
     let fact: String
@@ -16,5 +17,13 @@ struct FactEntity {
 extension FactEntity: Equatable {
     static func == (lhs: FactEntity, rhs: FactEntity) -> Bool {
         lhs.id == rhs.id
+    }
+}
+
+extension FactEntity {
+    var asFactRealmEntity: FactRealmEntity {
+        .init(id: self.id,
+              fact: self.fact,
+              imageUrl: self.imageUrl)
     }
 }

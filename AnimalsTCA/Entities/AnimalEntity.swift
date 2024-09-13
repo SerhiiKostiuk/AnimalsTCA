@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct AnimalEntity {
     let title: String
@@ -14,12 +15,12 @@ struct AnimalEntity {
     let status: ContentStatus
     let order: Int
     let facts: [FactEntity]?
-    
-    enum ContentStatus {
-        case free
-        case paid
-        case comingSoon
-    }
+}
+
+enum ContentStatus: String, PersistableEnum {
+    case free
+    case paid
+    case comingSoon
 }
 
 extension AnimalEntity: Equatable {
@@ -37,5 +38,22 @@ extension AnimalEntity {
                      status: .paid,
                      order: 0,
                      facts: .none)
+    }
+}
+
+extension AnimalEntity {
+    var asAnimalRealmEntity: AnimalRealmEntity {
+        let facts = self.facts?.compactMap({  $0.asFactRealmEntity }) ?? []
+        let factsList = List<FactRealmEntity>()
+        
+        facts.forEach {
+            factsList.append($0)
+        }
+        return .init(title: self.title,
+                     animalDescription: self.description,
+                     imageUrl: self.imageUrl,
+                     status: self.status,
+                     order: self.order,
+                     facts: factsList)
     }
 }

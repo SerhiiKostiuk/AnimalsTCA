@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03182B742C91708C0043996E /* AnimalsTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B732C91708C0043996E /* AnimalsTCAApp.swift */; };
-		03182B762C91708C0043996E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182B752C91708C0043996E /* ContentView.swift */; };
 		03182B782C91708E0043996E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03182B772C91708E0043996E /* Assets.xcassets */; };
 		03182B7C2C91708E0043996E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03182B7B2C91708E0043996E /* Preview Assets.xcassets */; };
 		03182B842C9171A40043996E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 03182B832C9171A40043996E /* ComposableArchitecture */; };
@@ -34,12 +33,18 @@
 		03A193CD2C92076F001CE466 /* Text+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193CC2C92076F001CE466 /* Text+Modifiers.swift */; };
 		03A193D22C92C5BE001CE466 /* Button+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193D12C92C5BE001CE466 /* Button+Modifiers.swift */; };
 		03A193D92C93971F001CE466 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193D82C93971F001CE466 /* String+Extensions.swift */; };
+		03A193DF2C944C77001CE466 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193DE2C944C77001CE466 /* ReachabilityService.swift */; };
+		03A193E22C944C9E001CE466 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 03A193E12C944C9E001CE466 /* Reachability */; };
+		03A193E52C944D8D001CE466 /* AnimalRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193E42C944D8D001CE466 /* AnimalRealmEntity.swift */; };
+		03A193E72C944DFA001CE466 /* FactRealmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193E62C944DFA001CE466 /* FactRealmEntity.swift */; };
+		03A193E92C944FE1001CE466 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193E82C944FE1001CE466 /* RealmService.swift */; };
+		03A193EC2C946C62001CE466 /* FactsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193EB2C946C62001CE466 /* FactsCardView.swift */; };
+		03A193EE2C948C20001CE466 /* Results+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193ED2C948C20001CE466 /* Results+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03182B702C91708C0043996E /* AnimalsTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalsTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03182B732C91708C0043996E /* AnimalsTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTCAApp.swift; sourceTree = "<group>"; };
-		03182B752C91708C0043996E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03182B772C91708E0043996E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03182B792C91708E0043996E /* AnimalsTCA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimalsTCA.entitlements; sourceTree = "<group>"; };
 		03182B7B2C91708E0043996E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -62,6 +67,12 @@
 		03A193CC2C92076F001CE466 /* Text+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Modifiers.swift"; sourceTree = "<group>"; };
 		03A193D12C92C5BE001CE466 /* Button+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Modifiers.swift"; sourceTree = "<group>"; };
 		03A193D82C93971F001CE466 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		03A193DE2C944C77001CE466 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		03A193E42C944D8D001CE466 /* AnimalRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalRealmEntity.swift; sourceTree = "<group>"; };
+		03A193E62C944DFA001CE466 /* FactRealmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactRealmEntity.swift; sourceTree = "<group>"; };
+		03A193E82C944FE1001CE466 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		03A193EB2C946C62001CE466 /* FactsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsCardView.swift; sourceTree = "<group>"; };
+		03A193ED2C948C20001CE466 /* Results+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +82,7 @@
 			files = (
 				03182B8A2C9171D60043996E /* Kingfisher in Frameworks */,
 				03182BBC2C918B9D0043996E /* Alamofire in Frameworks */,
+				03A193E22C944C9E001CE466 /* Reachability in Frameworks */,
 				03182B872C9171C40043996E /* RealmSwift in Frameworks */,
 				03182B842C9171A40043996E /* ComposableArchitecture in Frameworks */,
 			);
@@ -102,7 +114,6 @@
 				03182B902C9172D90043996E /* Library */,
 				03182B8B2C9172100043996E /* Entities */,
 				03182B732C91708C0043996E /* AnimalsTCAApp.swift */,
-				03182B752C91708C0043996E /* ContentView.swift */,
 				03182B772C91708E0043996E /* Assets.xcassets */,
 				03182B792C91708E0043996E /* AnimalsTCA.entitlements */,
 				03182B7A2C91708E0043996E /* Preview Content */,
@@ -121,6 +132,7 @@
 		03182B8B2C9172100043996E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				03A193E32C944D59001CE466 /* RealmEntities */,
 				03182B8C2C9172680043996E /* AnimalEntity.swift */,
 				03182B8E2C9172780043996E /* FactEntity.swift */,
 				03182B982C91753E0043996E /* EntitySerialization.swift */,
@@ -131,6 +143,7 @@
 		03182B902C9172D90043996E /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				03A193DD2C944C67001CE466 /* Services */,
 				03A193CB2C92073A001CE466 /* ViewModifiers */,
 				03182B972C9173150043996E /* Extensions */,
 				03182B912C9172E00043996E /* Network */,
@@ -163,6 +176,7 @@
 			children = (
 				03182B9A2C9175610043996E /* Collection+Extensions.swift */,
 				03A193D82C93971F001CE466 /* String+Extensions.swift */,
+				03A193ED2C948C20001CE466 /* Results+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 		03182B9D2C9176280043996E /* Facts */ = {
 			isa = PBXGroup;
 			children = (
+				03A193EA2C946C45001CE466 /* Views */,
 				03182BA12C9176660043996E /* FactsView.swift */,
 				03182BA32C9176B30043996E /* FactsStore.swift */,
 			);
@@ -230,6 +245,32 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		03A193DD2C944C67001CE466 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				03A193DE2C944C77001CE466 /* ReachabilityService.swift */,
+				03A193E82C944FE1001CE466 /* RealmService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		03A193E32C944D59001CE466 /* RealmEntities */ = {
+			isa = PBXGroup;
+			children = (
+				03A193E42C944D8D001CE466 /* AnimalRealmEntity.swift */,
+				03A193E62C944DFA001CE466 /* FactRealmEntity.swift */,
+			);
+			path = RealmEntities;
+			sourceTree = "<group>";
+		};
+		03A193EA2C946C45001CE466 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03A193EB2C946C62001CE466 /* FactsCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -251,6 +292,7 @@
 				03182B862C9171C40043996E /* RealmSwift */,
 				03182B892C9171D60043996E /* Kingfisher */,
 				03182BBB2C918B9D0043996E /* Alamofire */,
+				03A193E12C944C9E001CE466 /* Reachability */,
 			);
 			productName = AnimalsTCA;
 			productReference = 03182B702C91708C0043996E /* AnimalsTCA.app */;
@@ -285,6 +327,7 @@
 				03182B852C9171C40043996E /* XCRemoteSwiftPackageReference "realm-swift" */,
 				03182B882C9171D60043996E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				03182BBA2C918B9D0043996E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				03A193E02C944C9E001CE466 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 			);
 			productRefGroup = 03182B712C91708C0043996E /* Products */;
 			projectDirPath = "";
@@ -316,6 +359,7 @@
 				03182B992C91753E0043996E /* EntitySerialization.swift in Sources */,
 				03182B962C9173100043996E /* FactAPIModel.swift in Sources */,
 				03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */,
+				03A193E72C944DFA001CE466 /* FactRealmEntity.swift in Sources */,
 				03182BBF2C9198C70043996E /* CategoryCellView.swift in Sources */,
 				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
 				03182BB22C917FE10043996E /* BaseRequestProtocol.swift in Sources */,
@@ -323,16 +367,20 @@
 				03182BA42C9176B30043996E /* FactsStore.swift in Sources */,
 				03A193CD2C92076F001CE466 /* Text+Modifiers.swift in Sources */,
 				03182BA02C91765B0043996E /* AnimalCategoriesView.swift in Sources */,
-				03182B762C91708C0043996E /* ContentView.swift in Sources */,
 				03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */,
 				03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */,
 				03A193D22C92C5BE001CE466 /* Button+Modifiers.swift in Sources */,
 				03182B8F2C9172780043996E /* FactEntity.swift in Sources */,
 				03182BAD2C917E5B0043996E /* NetworkService.swift in Sources */,
+				03A193EC2C946C62001CE466 /* FactsCardView.swift in Sources */,
+				03A193E52C944D8D001CE466 /* AnimalRealmEntity.swift in Sources */,
 				03182BB42C9180CF0043996E /* AnimalsRequest.swift in Sources */,
 				03A193D92C93971F001CE466 /* String+Extensions.swift in Sources */,
+				03A193EE2C948C20001CE466 /* Results+Extensions.swift in Sources */,
 				03182BAF2C917EEE0043996E /* ServerConstants.swift in Sources */,
+				03A193DF2C944C77001CE466 /* ReachabilityService.swift in Sources */,
 				03182B742C91708C0043996E /* AnimalsTCAApp.swift in Sources */,
+				03A193E92C944FE1001CE466 /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +633,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		03A193E02C944C9E001CE466 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -607,6 +663,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 03182BBA2C918B9D0043996E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		03A193E12C944C9E001CE466 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03A193E02C944C9E001CE466 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
