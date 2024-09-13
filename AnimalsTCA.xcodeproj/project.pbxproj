@@ -30,6 +30,10 @@
 		03182BB42C9180CF0043996E /* AnimalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB32C9180CF0043996E /* AnimalsRequest.swift */; };
 		03182BB72C9185140043996E /* AnimalCategoriesEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BB62C9185140043996E /* AnimalCategoriesEnviroment.swift */; };
 		03182BBC2C918B9D0043996E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 03182BBB2C918B9D0043996E /* Alamofire */; };
+		03182BBF2C9198C70043996E /* CategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03182BBE2C9198C70043996E /* CategoryCellView.swift */; };
+		03A193CD2C92076F001CE466 /* Text+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193CC2C92076F001CE466 /* Text+Modifiers.swift */; };
+		03A193D22C92C5BE001CE466 /* Button+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193D12C92C5BE001CE466 /* Button+Modifiers.swift */; };
+		03A193D92C93971F001CE466 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A193D82C93971F001CE466 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		03182BB12C917FE10043996E /* BaseRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestProtocol.swift; sourceTree = "<group>"; };
 		03182BB32C9180CF0043996E /* AnimalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequest.swift; sourceTree = "<group>"; };
 		03182BB62C9185140043996E /* AnimalCategoriesEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCategoriesEnviroment.swift; sourceTree = "<group>"; };
+		03182BBE2C9198C70043996E /* CategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellView.swift; sourceTree = "<group>"; };
+		03A193CC2C92076F001CE466 /* Text+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Modifiers.swift"; sourceTree = "<group>"; };
+		03A193D12C92C5BE001CE466 /* Button+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Modifiers.swift"; sourceTree = "<group>"; };
+		03A193D82C93971F001CE466 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 		03182B902C9172D90043996E /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				03A193CB2C92073A001CE466 /* ViewModifiers */,
 				03182B972C9173150043996E /* Extensions */,
 				03182B912C9172E00043996E /* Network */,
 			);
@@ -153,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				03182B9A2C9175610043996E /* Collection+Extensions.swift */,
+				03A193D82C93971F001CE466 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 		03182B9E2C9176350043996E /* AnimalCategories */ = {
 			isa = PBXGroup;
 			children = (
+				03182BBD2C9198AB0043996E /* Views */,
 				03182BB52C9184FB0043996E /* Store */,
 				03182B9F2C91765B0043996E /* AnimalCategoriesView.swift */,
 			);
@@ -200,6 +211,23 @@
 				03182BB62C9185140043996E /* AnimalCategoriesEnviroment.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		03182BBD2C9198AB0043996E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03182BBE2C9198C70043996E /* CategoryCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03A193CB2C92073A001CE466 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				03A193CC2C92076F001CE466 /* Text+Modifiers.swift */,
+				03A193D12C92C5BE001CE466 /* Button+Modifiers.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,17 +316,21 @@
 				03182B992C91753E0043996E /* EntitySerialization.swift in Sources */,
 				03182B962C9173100043996E /* FactAPIModel.swift in Sources */,
 				03182BA62C9176F60043996E /* AnimalCategoriesStore.swift in Sources */,
+				03182BBF2C9198C70043996E /* CategoryCellView.swift in Sources */,
 				03182B942C9173060043996E /* AnimalAPIModel.swift in Sources */,
 				03182BB22C917FE10043996E /* BaseRequestProtocol.swift in Sources */,
 				03182BB72C9185140043996E /* AnimalCategoriesEnviroment.swift in Sources */,
 				03182BA42C9176B30043996E /* FactsStore.swift in Sources */,
+				03A193CD2C92076F001CE466 /* Text+Modifiers.swift in Sources */,
 				03182BA02C91765B0043996E /* AnimalCategoriesView.swift in Sources */,
 				03182B762C91708C0043996E /* ContentView.swift in Sources */,
 				03182B8D2C9172680043996E /* AnimalEntity.swift in Sources */,
 				03182B9B2C9175610043996E /* Collection+Extensions.swift in Sources */,
+				03A193D22C92C5BE001CE466 /* Button+Modifiers.swift in Sources */,
 				03182B8F2C9172780043996E /* FactEntity.swift in Sources */,
 				03182BAD2C917E5B0043996E /* NetworkService.swift in Sources */,
 				03182BB42C9180CF0043996E /* AnimalsRequest.swift in Sources */,
+				03A193D92C93971F001CE466 /* String+Extensions.swift in Sources */,
 				03182BAF2C917EEE0043996E /* ServerConstants.swift in Sources */,
 				03182B742C91708C0043996E /* AnimalsTCAApp.swift in Sources */,
 			);
@@ -359,6 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -414,6 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -442,7 +476,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
@@ -479,7 +513,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
