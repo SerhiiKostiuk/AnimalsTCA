@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct AnimalsTCAApp: App {
+    private static let store = Store(initialState: AnimalCategoriesStore.State()) {
+        AnimalCategoriesStore()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WithPerceptionTracking {
+                AnimalCategoriesView(store: AnimalsTCAApp.store)
+            }
         }
     }
 }

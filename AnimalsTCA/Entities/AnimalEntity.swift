@@ -27,3 +27,15 @@ extension AnimalEntity: Equatable {
         lhs.order == rhs.order
     }
 }
+
+extension AnimalEntity {
+    
+    static var empty: AnimalEntity {
+        return .init(title: "empty",
+                     description: "empty",
+                     imageUrl: .empty,
+                     status: .paid,
+                     order: 0,
+                     facts: .none)
+    }
+}
