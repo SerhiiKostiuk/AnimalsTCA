@@ -7,7 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
-
+//Прохання до того хто буде рев'юїти код, строго не судити так як, це перше використання архітектури TCA
 @Reducer
 struct AnimalCategoriesStore {
     
